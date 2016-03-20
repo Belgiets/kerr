@@ -1,17 +1,428 @@
 @charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 @font-face {
-  font-family: 'Gotham-light';
+  font-family: 'Gotham light';
   src: url("../fonts/gotham-light.eot");
   src: local("☺"), url("../fonts/gotham-light.woff") format("woff"), url("../fonts/gotham-light.ttf") format("truetype"), url("../fonts/gotham-light.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
-  font-family: 'Gotham-medium';
+  font-family: 'Gotham medium';
   src: url("../fonts/gotham-medium.eot");
   src: local("☺"), url("../fonts/gotham-medium.woff") format("woff"), url("../fonts/gotham-medium.ttf") format("truetype"), url("../fonts/gotham-medium.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
-.container {
-  max-width: 1280px; }
+a {
+  outline: 0; }
+
+h1 {
+  font-size: 48px;
+  font-family: "Gotham light";
+  font-weight: 300; }
+
+.div-table {
+  display: table; }
+  .div-table .div-row {
+    display: table-row; }
+    .div-table .div-row .div-cell {
+      display: table-cell; }
+
+.col-half {
+  width: 50%; }
+
+.col-fourth {
+  width: 25%; }
+
+.col-half,
+.col-fourth {
+  box-sizing: border-box; }
+
+.sc-wr {
+  font-size: 0; }
+  .sc-wr .col-s,
+  .sc-wr .col-f {
+    display: inline-block; }
+
+.col-s {
+  width: 58%; }
+
+.col-f {
+  width: 42%; }
+
+.sect {
+  width: 100%;
+  overflow: hidden; }
+  .sect .container {
+    box-sizing: border-box;
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative; }
+
+.sect-cc {
+  background: #007ed8; }
+  .sect-cc .img-top-logo {
+    margin: 21px 0 0 62px; }
+  .sect-cc h1 {
+    line-height: 50px;
+    color: #b4defd;
+    margin: 29px 0 30px 63px; }
+  .sect-cc p {
+    color: white;
+    font-family: "Gotham light";
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 28px;
+    margin: 0 24px 0 63px; }
+    .sect-cc p:last-child {
+      color: #f1f1f1;
+      font-family: "Gotham medium";
+      font-size: 20px;
+      margin: 0 0 26px 63px; }
+  .sect-cc .img-product {
+    max-width: 100%;
+    height: auto; }
+  .sect-cc .monster {
+    background: transparent url(../imgs/monster.png) no-repeat;
+    background-size: cover;
+    position: relative; }
+    .sect-cc .monster button {
+      color: white;
+      font-family: "Gotham medium";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      background-color: #1da0fd;
+      padding: 10px;
+      border: none;
+      position: absolute;
+      top: 40px;
+      right: 129px; }
+      .sect-cc .monster button:hover {
+        background-color: #0379cd;
+        cursor: pointer; }
+
+.itm-icon,
+.flex-nav {
+  background: transparent url(../imgs/spritesheet.png) no-repeat; }
+
+.sect-icons {
+  background: #123b79;
+  text-align: center; }
+  .sect-icons .container {
+    width: 1149px; }
+  .sect-icons .items {
+    font-size: 0;
+    margin: 28px 0 31px; }
+  .sect-icons .itm {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: 20%; }
+    .sect-icons .itm .itm-icon-wr {
+      width: 54px;
+      height: 54px;
+      margin: 0 auto 29px;
+      border-radius: 50%;
+      background: #07224a;
+      position: relative; }
+    .sect-icons .itm .itm-icon {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto; }
+    .sect-icons .itm .itm-icon.eye {
+      background-position: -160px -10px;
+      width: 33px;
+      height: 26px; }
+    .sect-icons .itm .itm-icon.second {
+      background-position: -82px -10px;
+      width: 29px;
+      height: 29px; }
+    .sect-icons .itm .itm-icon.arrows {
+      background-position: -121px -10px;
+      width: 29px;
+      height: 29px; }
+    .sect-icons .itm .itm-icon.lock {
+      background-position: -203px -10px;
+      width: 24px;
+      height: 33px; }
+    .sect-icons .itm .itm-icon.trash {
+      background-position: -237px -10px;
+      width: 24px;
+      height: 31px; }
+    .sect-icons .itm p {
+      color: white;
+      font-family: "Gotham medium";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 22px; }
+
+.sect-sc {
+  background: #d0007b; }
+  .sect-sc .container {
+    padding: 0 63px;
+    box-sizing: border-box; }
+  .sect-sc .sc-wr {
+    padding: 0 0 16px; }
+  .sect-sc h1 {
+    margin: 36px 0 19px;
+    color: #fecae9; }
+  .sect-sc p {
+    font-family: "Gotham light";
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 30px;
+    color: white; }
+    .sect-sc p:last-child {
+      color: #f1f1f1;
+      font-family: "Gotham medium";
+      font-size: 20px;
+      margin: 24px 0 0; }
+  .sect-sc .col-s,
+  .sect-sc .col-f {
+    vertical-align: top; }
+  .sect-sc .col-f {
+    text-align: center; }
+    .sect-sc .col-f img {
+      max-width: 100%;
+      height: auto;
+      margin: 13px 0 0; }
+
+.sect-form {
+  background: #9c005b; }
+  .sect-form .container {
+    max-width: 732px;
+    padding: 32px 0 33px;
+    overflow: hidden; }
+  .sect-form .form-top {
+    overflow: hidden; }
+  .sect-form input {
+    /* Firefox 19+ */
+    /* Firefox 18- */ }
+    .sect-form input::-webkit-input-placeholder {
+      color: #ff93d3; }
+    .sect-form input::-moz-placeholder {
+      color: #ff93d3;
+      opacity: 1; }
+    .sect-form input:-moz-placeholder {
+      color: #ff93d3;
+      opacity: 1; }
+    .sect-form input:-ms-input-placeholder {
+      color: #ff93d3; }
+  .sect-form input,
+  .sect-form .cstm-sel {
+    width: 100%;
+    background: #ec008c;
+    border: none;
+    color: #ff93d3;
+    font-family: "Gotham medium";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 10px 16px;
+    box-sizing: border-box;
+    margin-bottom: 18px;
+    height: 44px; }
+    .sect-form input:-moz-focusring,
+    .sect-form .cstm-sel:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 #ff93d3; }
+  .sect-form .cstm-sel {
+    background: #ec008c url(../imgs/cstm-sel.png) no-repeat 90% center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none; }
+  .sect-form input[type=submit] {
+    background: #fd64bf;
+    width: auto;
+    float: right;
+    margin-bottom: 0;
+    min-width: 105px;
+    color: white;
+    font-size: 16px; }
+    .sect-form input[type=submit]:hover {
+      cursor: pointer;
+      background-color: #c8368d; }
+  .sect-form p {
+    margin: 0 0 21px;
+    float: left;
+    color: #f1f1f1;
+    font-family: "Gotham medium";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    width: 58%; }
+  .sect-form span {
+    float: right;
+    color: #fd64bf;
+    font-family: "Gotham medium";
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 35px; }
+
+#form > div {
+  float: left; }
+  #form > div:nth-child(odd) {
+    padding: 0 0 0 2px; }
+  #form > div:nth-child(even), #form > div:nth-child(1) {
+    padding: 0 7px 0 0; }
+  #form > div:nth-child(2), #form > div:nth-child(7) {
+    padding: 0 10px 0 2px; }
+  #form > div:nth-child(8) {
+    padding: 0 0 0 7px; }
+
+.sect-carousel {
+  background: #e8e8e8; }
+  .sect-carousel .container {
+    max-width: 970px; }
+  .sect-carousel .slider-wr {
+    position: relative; }
+    .sect-carousel .slider-wr .flex-nav {
+      display: block;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0; }
+    .sect-carousel .slider-wr .flex-prev {
+      background-position: -5px -5px;
+      width: 26px;
+      height: 51px;
+      left: 0; }
+    .sect-carousel .slider-wr .flex-next {
+      background-position: -41px -5px;
+      width: 26px;
+      height: 51px;
+      right: 0; }
+  .sect-carousel .flexslider {
+    background: transparent;
+    max-width: 732px;
+    margin: 53px auto 50px;
+    border: none; }
+  .sect-carousel .flex-control-nav {
+    bottom: -30px; }
+  .sect-carousel .slide h2 {
+    color: #906;
+    font-family: "Gotham light";
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 36px;
+    margin-bottom: 16px; }
+  .sect-carousel .slide p {
+    font-family: "Gotham medium";
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 35px;
+    color: #666; }
+  .sect-carousel .slide span {
+    color: #333; }
+  .sect-carousel .slide .col-f {
+    text-align: center; }
+  .sect-carousel .slide .col-s {
+    padding-left: 35px;
+    box-sizing: border-box;
+    vertical-align: top; }
+
+.sect-buy {
+  background: white; }
+  .sect-buy .container {
+    padding: 40px 54px 61px 125px; }
+  .sect-buy h3 {
+    color: #906;
+    font-size: 38px;
+    line-height: 40px;
+    font-family: "Gotham light";
+    font-weight: 300; }
+    .sect-buy h3 span {
+      font-family: "Gotham medium";
+      font-weight: 400; }
+  .sect-buy h4 {
+    color: #ec008c;
+    font-family: "Gotham medium";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 15px 0 102px; }
+  .sect-buy p {
+    color: #666;
+    font-family: "Gotham medium";
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 16px;
+    max-width: 459px; }
+  .sect-buy img {
+    position: absolute;
+    right: 12px;
+    bottom: 41px; }
+  .sect-buy button {
+    position: absolute;
+    top: 34px;
+    right: 124px;
+    min-width: 106px;
+    min-height: 43px;
+    background-color: #ec008c;
+    color: white;
+    font-family: "Gotham medium";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    border: none; }
+  .sect-buy .copyright {
+    position: absolute;
+    bottom: 24px;
+    right: 120px;
+    color: #666;
+    font-family: "Gotham medium";
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 35px; }
 
 /*# sourceMappingURL=style.css.map */
