@@ -363,6 +363,7 @@ h1 {
 #form {
   & > div {
     float: left;
+    position: relative;
 
     &:nth-child(odd) {
       padding: 0 0 0 2px;
@@ -384,8 +385,13 @@ h1 {
     &:nth-child(8) {
       padding: 0 0 0 7px;
     }
+  }
 
-
+  label.error {
+    position: absolute;
+    left: 6px;
+    bottom: 5px;
+    font-size: 12px;
   }
 }
 

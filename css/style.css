@@ -317,7 +317,8 @@ h1 {
     line-height: 35px; }
 
 #form > div {
-  float: left; }
+  float: left;
+  position: relative; }
   #form > div:nth-child(odd) {
     padding: 0 0 0 2px; }
   #form > div:nth-child(even), #form > div:nth-child(1) {
@@ -328,6 +329,11 @@ h1 {
     padding: 0 2px 0; }
   #form > div:nth-child(8) {
     padding: 0 0 0 7px; }
+#form label.error {
+  position: absolute;
+  left: 6px;
+  bottom: 5px;
+  font-size: 12px; }
 
 .sect-carousel {
   background: #e8e8e8; }

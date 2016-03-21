@@ -138,12 +138,12 @@
                 <input type="text" id="address" name="address" placeholder="Street Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Street Address'"/>
             </div>
             <div class="col-fourth">
-                <select id="country" class="cstm-sel">
+                <select id="country" name="country" class="cstm-sel">
                     <option disabled selected>Country</option>
                 </select>
             </div>
             <div class="col-fourth">
-                <select id="st-pr" class="cstm-sel">
+                <select id="st-pr" name="st-pr" class="cstm-sel">
                     <option disabled selected>State/Province</option>
                 </select>
             </div>
