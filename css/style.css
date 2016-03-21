@@ -111,7 +111,7 @@ h1 {
   .sect-cc h1 {
     line-height: 50px;
     color: #b4defd;
-    margin: 29px 0 30px 63px; }
+    margin: 29px 24px 30px 63px; }
   .sect-cc p {
     color: white;
     font-family: "Gotham light";
@@ -123,12 +123,14 @@ h1 {
       color: #f1f1f1;
       font-family: "Gotham medium";
       font-size: 20px;
-      margin: 0 0 26px 63px; }
+      margin: 0 10px 26px 63px;
+      clear: both; }
   .sect-cc .img-product {
     max-width: 100%;
-    height: auto; }
+    height: auto;
+    float: right; }
   .sect-cc .monster {
-    background: transparent url(../imgs/monster.png) no-repeat;
+    background: transparent url(../imgs/monster.jpg) no-repeat;
     background-size: cover;
     position: relative; }
     .sect-cc .monster button {
@@ -142,10 +144,12 @@ h1 {
       border: none;
       position: absolute;
       top: 40px;
-      right: 129px; }
+      right: 20%; }
       .sect-cc .monster button:hover {
         background-color: #0379cd;
         cursor: pointer; }
+    .sect-cc .monster img {
+      display: none; }
 
 .itm-icon,
 .flex-nav {
@@ -155,13 +159,13 @@ h1 {
   background: #123b79;
   text-align: center; }
   .sect-icons .container {
-    width: 1149px; }
+    max-width: 1149px; }
   .sect-icons .items {
     font-size: 0;
     margin: 28px 0 31px; }
   .sect-icons .itm {
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: top;
     text-align: center;
     width: 20%; }
     .sect-icons .itm .itm-icon-wr {
@@ -281,6 +285,8 @@ h1 {
     -moz-appearance: none;
     -ms-appearance: none;
     appearance: none; }
+    .sect-form .cstm-sel::-ms-expand {
+      display: none; }
   .sect-form input[type=submit] {
     background: #fd64bf;
     width: auto;
@@ -302,6 +308,7 @@ h1 {
     line-height: 22px;
     width: 58%; }
   .sect-form span {
+    display: block;
     float: right;
     color: #fd64bf;
     font-family: "Gotham medium";
@@ -315,8 +322,10 @@ h1 {
     padding: 0 0 0 2px; }
   #form > div:nth-child(even), #form > div:nth-child(1) {
     padding: 0 7px 0 0; }
-  #form > div:nth-child(2), #form > div:nth-child(7) {
-    padding: 0 10px 0 2px; }
+  #form > div:nth-child(2) {
+    padding: 0 7px 0 2px; }
+  #form > div:nth-child(7) {
+    padding: 0 2px 0; }
   #form > div:nth-child(8) {
     padding: 0 0 0 7px; }
 
@@ -361,7 +370,8 @@ h1 {
     font-size: 17px;
     font-weight: 400;
     line-height: 35px;
-    color: #666; }
+    color: #666;
+    max-width: 300px; }
   .sect-carousel .slide span {
     color: #333; }
   .sect-carousel .slide .col-f {
@@ -370,6 +380,8 @@ h1 {
     padding-left: 35px;
     box-sizing: border-box;
     vertical-align: top; }
+  .sect-carousel .slide img {
+    max-width: 100%; }
 
 .sect-buy {
   background: white; }
@@ -380,7 +392,8 @@ h1 {
     font-size: 38px;
     line-height: 40px;
     font-family: "Gotham light";
-    font-weight: 300; }
+    font-weight: 300;
+    max-width: 560px; }
     .sect-buy h3 span {
       font-family: "Gotham medium";
       font-weight: 400; }
@@ -390,18 +403,20 @@ h1 {
     font-size: 16px;
     font-weight: 400;
     line-height: 16px;
-    margin: 15px 0 102px; }
+    margin: 15px 0 102px;
+    max-width: 48%; }
   .sect-buy p {
     color: #666;
     font-family: "Gotham medium";
     font-size: 11px;
     font-weight: 400;
     line-height: 16px;
-    max-width: 459px; }
+    max-width: 42%; }
   .sect-buy img {
     position: absolute;
     right: 12px;
-    bottom: 41px; }
+    bottom: 41px;
+    max-width: 55%; }
   .sect-buy button {
     position: absolute;
     top: 34px;
@@ -415,6 +430,9 @@ h1 {
     font-weight: 400;
     line-height: 24px;
     border: none; }
+    .sect-buy button:hover {
+      background-color: #c10273;
+      cursor: pointer; }
   .sect-buy .copyright {
     position: absolute;
     bottom: 24px;
@@ -424,5 +442,131 @@ h1 {
     font-size: 11px;
     font-weight: 400;
     line-height: 35px; }
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  .sect-buy button {
+    right: 10%; } }
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .sect-cc .div-table,
+  .sect-cc .div-row,
+  .sect-cc .div-cell {
+    display: block !important; }
+  .sect-cc .col-half {
+    width: 100%; }
+  .sect-cc .monster {
+    height: 543px; }
+
+  .sect-sc .col-s,
+  .sect-sc .col-f {
+    width: 100%; }
+
+  .sect-carousel .slider-wr {
+    margin: 0 10px;
+    padding: 0 30px; }
+
+  .sect-buy h4 {
+    max-width: 100%; }
+  .sect-buy h4, .sect-buy p {
+    margin-bottom: 30px; }
+  .sect-buy p, .sect-buy img {
+    max-width: 100%; }
+  .sect-buy img {
+    position: static;
+    width: 90%; }
+  .sect-buy .pb-wr {
+    position: relative; }
+  .sect-buy button {
+    top: 0;
+    right: 0; } }
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .sect-cc h1 span {
+    word-wrap: break-word; }
+
+  .sect-icons .itm {
+    width: 33.3%; }
+    .sect-icons .itm:nth-child(3) {
+      margin-bottom: 20px; }
+
+  .sect-form .container {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .sect-form .col-fourth {
+    width: 50%; }
+  .sect-form p {
+    width: 100%; }
+
+  #form > div:nth-child(odd) {
+    padding: 0 7px 0 0; }
+  #form > div:nth-child(even) {
+    padding: 0 0 0 7px; }
+
+  .sect-carousel .col-f,
+  .sect-carousel .col-s {
+    display: block;
+    width: 100%; }
+  .sect-carousel .slide .col-s {
+    width: 305px;
+    padding: 0;
+    margin: 20px auto; }
+
+  .sect-buy .container {
+    padding-left: 63px; }
+  .sect-buy img {
+    max-width: 80%; } }
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 40px; }
+
+  .sect-cc .img-top-logo,
+  .sect-cc h1,
+  .sect-cc p,
+  .sect-cc p:last-child {
+    margin-left: 10px; }
+  .sect-cc .monster {
+    background: none;
+    height: auto; }
+    .sect-cc .monster img {
+      display: block;
+      max-width: 100%; }
+
+  .sect-icons .itm {
+    width: 50%; }
+    .sect-icons .itm:nth-child(2) {
+      margin-bottom: 20px; }
+
+  .sect-sc .container {
+    padding: 0 10px; }
+
+  .sect-form .col-fourth,
+  .sect-form .col-half {
+    width: 100%; }
+  .sect-form span {
+    font-size: 18px; }
+
+  #form > div:nth-child(odd), #form > div:nth-child(even) {
+    padding: 0; }
+
+  .sect-carousel .slider-wr {
+    padding: 0; }
+    .sect-carousel .slider-wr .flex-nav {
+      display: none; }
+  .sect-carousel .slide h2 {
+    font-size: 37px; }
+
+  .sect-buy .container {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .sect-buy .pb-wr {
+    text-align: center; }
+    .sect-buy .pb-wr img {
+      max-width: 100%; }
+    .sect-buy .pb-wr button {
+      position: static;
+      margin-bottom: 30px; } }
+/* Custom, iPhone Retina */
 
 /*# sourceMappingURL=style.css.map */

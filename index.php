@@ -28,17 +28,18 @@
             <div class="div-row">
                 <div class="div-cell col-half">
                     <img class="img-top-logo" src="imgs/kerr-logo.png" alt="logo"/>
-                    <h1>Cement cleanup can<br>be unpredictable.</h1>
+                    <h1>Cement cleanup can be <span>unpredictable</span>.</h1>
                     <p>
                         Maxcem Elite™ Chroma dispenses pink and fades to a cement shade, allowing you to recognize the
                         precise
                         moment your excess cement is ready to be removed. Then, with just one peel, success.
                         Your restoration is secure.
                     </p>
-                    <img class="img-product" src="imgs/product.png" align="right" alt="product"/>
+                    <img class="img-product" src="imgs/product.png" alt="product"/>
                     <p>Change your cement. Change your outcomes.</p>
                 </div>
                 <div class="div-cell col-half monster">
+                    <img src="imgs/monster.jpg" alt="monster"/>
                     <button>Learn More</button>
                 </div>
             </div>
@@ -110,9 +111,12 @@
                 Fill out the form or call us today, and we’ll schedule a Chroma Challenge for your office! If you
                 aren’t completely satisfied, let us know and we’ll make it right.
             </p>
-              <span>
-                  1-800-KERR-123
-              </span>
+            <span>
+              KERR-123
+            </span>
+            <span>
+              1-800-
+            </span>
         </div>
         <form id="form" method="post">
             <div class="col-fourth">
@@ -160,22 +164,22 @@
                     [
                         "<img src='imgs/slides/slide-1.png' alt='preparation'>",
                         "PREPARATION",
-                        "Prepare site normally and test <br>restoration for proper fit<span>.</span>"
+                        "Prepare site normally and test restoration for proper fit<span>.</span>"
                     ],
                     [
                         "<img src='imgs/slides/slide-2.png' alt='application'>",
                         "APPLICATION",
-                        "Cement is pink when dispensed <br>and gradually fades to the cement <br>shade<span>.</span>"
+                        "Cement is pink when dispensed and gradually fades to the cement shade<span>.</span>"
                     ],
                     [
                         "<img src='imgs/slides/slide-3.png' alt='dual cure'>",
                         "DUAL CURE",
-                        "Pink disappears after both<br>self-cure and tack cure, allowing<br>for maximum flexibilty<span>.</span>"
+                        "Pink disappears after both self-cure and tack cure, allowing for maximum flexibilty<span>.</span>"
                     ],
                     [
                         "<img src='imgs/slides/slide-3.png' alt='cleanup'>",
                         "CLEANUP",
-                        "Clean up is simple once the pink color<br>has turned to the cement color, avoiding<br>potential issues and offering maximum<br>flexibility<span>.</span>"
+                        "Clean up is simple once the pink color has turned to the cement color, avoiding potential issues and offering maximum flexibility<span>.</span>"
                     ]
                 ];
 
@@ -205,8 +209,8 @@
 
 <div class="sect sect-buy">
     <div class="container">
-        <h3>Buy 1 <span>Maxcem Elite™ Chroma</span> <br>Refill and get 1 FREE!</h3>
-        <h4>Maxcem Elite™ Chroma  Self-Etch/Self-Adhesive Resin Cement<br>with Cleanup Indicator</h4>
+        <h3>Buy 1 <span>Maxcem Elite™ Chroma</span> Refill and get 1 FREE!</h3>
+        <h4>Maxcem Elite™ Chroma  Self-Etch/Self-Adhesive Resin Cement with Cleanup Indicator</h4>
         <p>
             Promotional goods must be of equal or lesser value and cannot be combined with any other offers. No product
             substitutions available. All offers will require a proof of purchase dated from February 1, 2016 to March
@@ -214,8 +218,10 @@
             print promo code MEC16 legibly on your invoice and fax to 888.727.2614 or email a PDF of your invoice to
             kerrpromo@kerrdental.com. Allow up to 8 weeks for promotion to be processed. MKT-1454
         </p>
-        <img src="imgs/product-box.png" alt="product-box"/>
-        <button>Buy Now!</button>
+        <div class="pb-wr">
+            <button>Buy Now!</button>
+            <img src="imgs/product-box.png" alt="product-box"/>
+        </div>
         <div class="copyright">
             ©2016 Kerr Corporation
         </div>
