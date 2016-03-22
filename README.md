@@ -10,7 +10,9 @@ Test task (landing page with mail sending by form submit)
   CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 
-3. For email sending(i used gmail smtp and it works) you must to config $config['mail'] array in /inc/scripts.php
+3. For email sending(i used gmail smtp and it works) you must to config $config['mail'] array in /inc/scripts.php		
+Dont't forget to setup 'admin_email', which gets emails from a form		
+
 'mail' => [
     'host'          => 'smtp.gmail.com',
     'user'          => '',
