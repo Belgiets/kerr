@@ -9,6 +9,7 @@ if (isset($_POST)) {
             } else {
                 die(json_encode("false"));
             }
+
             break;
 
         case 'get_stpr':
@@ -19,5 +20,16 @@ if (isset($_POST)) {
             } else {
                 die(json_encode("false"));
             }
+
+            break;
+
+        case 'send_email':
+            if (send_email($_POST)) {
+                die(json_encode("true"));
+            } else {
+                die(json_encode("false"));
+            }
+
+            break;
     }
 }

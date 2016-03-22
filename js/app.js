@@ -84,6 +84,9 @@ $(document).ready(function() {
         return this.optional(element) || /.*[^ ].*/.test(value);
     }, "Please specify not only spaces");
 
+    /**
+     * validate form on a front page
+     */
     $('#form').validate({
         rules: {
             "f-name": {
@@ -95,15 +98,16 @@ $(document).ready(function() {
                 names: true
             },
             "email": {
+                required: true,
                 email: true
             },
             "p-name": {
                 required: true,
-                names: true
+                only_spaces: true
             },
             "tel": {
                 required: true,
-                phoneUS: true
+                only_spaces: true
             },
             "address": {
                 required: true,
@@ -122,10 +126,36 @@ $(document).ready(function() {
             },
             "l-name": {
                 names: 'Please specify the correct last name'
-            },
-            "p-name": {
-                names: 'Please specify the correct practice name'
             }
         }
+    });
+
+    /**
+     * submit form on a front page
+     */
+    $('#form').submit(function(e) {
+        e.preventDefault();
+
+        var fields = {
+            action:          'send_email',
+            first_name:      $('#f-name', this).val(),
+            last_name:       $('#l-name', this).val(),
+            email:           $('#email', this).val(),
+            practice_name:   $('#p-name', this).val(),
+            address:         $('#address', this).val(),
+            country:         $('#country option:selected', this).text(),
+            state__province: $('#st-pr', this).val()
+        };
+
+        doAjax(
+            fields,
+            function(data) {
+                if ('false' != data) {
+                    $.growl.notice({ message: "Message sent!" });
+                } else {
+                    $.growl.error({ message: "Houston, we have a problem! (email)" });
+                }
+            }
+        );
     });
 });

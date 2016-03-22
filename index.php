@@ -16,6 +16,7 @@
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/jquery.growl.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -235,6 +236,7 @@
 <script type="application/javascript" src="js/jquery-2.2.1.min.js"></script>
 <script type="application/javascript" src="js/jquery.validate.min.js"></script>
 <script type="application/javascript" src="js/jquery.flexslider-min.js"></script>
+<script type="application/javascript" src="js/jquery.growl.js"></script>
 <script type="application/javascript" src="js/app.js"></script>
 
 </body>
