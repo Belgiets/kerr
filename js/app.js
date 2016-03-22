@@ -135,6 +135,7 @@ $(document).ready(function() {
      */
     $('#form').submit(function(e) {
         e.preventDefault();
+        var form = $(this);
 
         var fields = {
             action:          'send_email',
@@ -152,6 +153,7 @@ $(document).ready(function() {
             function(data) {
                 if ('false' != data) {
                     $.growl.notice({ message: "Message sent!" });
+                    form.trigger('reset');
                 } else {
                     $.growl.error({ message: "Houston, we have a problem! (email)" });
                 }

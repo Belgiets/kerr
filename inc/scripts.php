@@ -2,7 +2,7 @@
 $config = [
     'mail' => [
         'host'          => 'smtp.gmail.com',
-        'user'          => '',
+        'user'          => 'wp.test.mail.for',
         'pass'          => '',
         'auth_protocol' => 'tls',
         'port'          => 587,
